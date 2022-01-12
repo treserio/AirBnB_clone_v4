@@ -159,7 +159,7 @@ No known bugs at this time.
 - Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 - David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
 - Tres Serio - [Github](https://github.com/treserio) / 3319@holbertonschool.com
-- Tofer Sokolosky - [Github](https://github.com/Esoteric918) / tofer411@gmail.com
+- Tofer Sokolosky - [Github](https://github.com/Esoteric918) /  [Twitter](https://twitter.com/ESOteric918)
   
 Second part of Airbnb: Joann Vuong
 ## License
