@@ -1,15 +1,16 @@
-let dicAmens = {};
-$(document).ready(() => {
-  $('input:checkox').on('click', () => {
-    if (this.checked === true) {
-      listAmens[$(this).data('name')] = $(this).data('id');
+const amList = [];
+setTimeout(() => {
+  $('input:checkbox').click(function () {
+    if ($(this).is(':checked')) {
+      amList.push($(this).data('name'));
     } else {
-      delete dicAmens[$(this).data('name')];
+      amList.splice(amList.indexOf($(this).data('name')), 1);
+    }
+    console.log(amList);
+    if (amList.length == 0) {
+      $('.amenities h4').text(String.fromCharCode(160));
+    } else {
+      $('.amenities h4').text(amList.sort().join(', '));
     }
   });
-  let list = [];
-  for (let i = 0; i < list.dicAmens; ++i) {
-    list.push(list.dicAmens);
-  $('.amenities h4').html(list.join(', '));
-  }
-});
+}, 200);
