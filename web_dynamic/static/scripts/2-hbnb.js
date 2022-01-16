@@ -1,4 +1,5 @@
 const amList = [];
+
 setTimeout(() => {
   $('input:checkbox').click(function () {
     if ($(this).is(':checked')) {
@@ -15,14 +16,25 @@ setTimeout(() => {
   });
 }, 200);
 
-$(() => {
-  $.ajax({
-    url: 'http://172.25.88.2:5001/api/v1/status/',
-    type: 'get',
-    data: 'a'
-  }).done(function (data, statusText, xhr) {
-    var status = xhr.status;                //200
-    console.log(status);
-    // var head = xhr.getAllResponseHeaders(); //Detail header info
-  });
+$.get('http://0.0.0.0:5001/api/v1/status/l', function (data) {
+  if (data.status === 'OK') {
+  console.log(data);
+    $('div#api_status').addClass('available');
+  } else {
+    $('div#api_status').removeClass('available');
+  }
 });
+
+
+
+// $(() => {
+//   $.ajax({
+//     url: 'http://172.25.88.2:5001/api/v1/status/',
+//     type: 'get',
+//     data: 'a'
+//   }).done(function (data, statusText, xhr) {
+//     var status = xhr.status;                //200
+//     console.log(status);
+//     // var head = xhr.getAllResponseHeaders(); //Detail header info
+//   });
+// });
