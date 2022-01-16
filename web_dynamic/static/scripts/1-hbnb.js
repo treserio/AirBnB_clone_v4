@@ -6,7 +6,7 @@ setTimeout(() => {
     } else {
       amList.splice(amList.indexOf($(this).data('name')), 1);
     }
-    console.log(amList);
+    // if get h4 of parent's, parent's, parent's, parent?
     if (amList.length == 0) {
       $('.amenities h4').text(String.fromCharCode(160));
     } else {
