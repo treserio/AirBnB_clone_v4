@@ -1,5 +1,4 @@
 const amList = [];
-
 setTimeout(() => {
   $('input:checkbox').click(function () {
     if ($(this).is(':checked')) {
@@ -16,7 +15,7 @@ setTimeout(() => {
   });
 }, 200);
 
-$.get('http://0.0.0.0:5001/api/v1/status/l', function (data) {
+$.get('http://0.0.0.0:5000/api/v1/status/', (data) => {
   if (data.status === 'OK') {
   console.log(data);
     $('div#api_status').addClass('available');
@@ -24,6 +23,14 @@ $.get('http://0.0.0.0:5001/api/v1/status/l', function (data) {
     $('div#api_status').removeClass('available');
   }
 });
+
+// const callApi = $.ajax('http://0.0.0.0:5001/api/v1/status/');
+//   if (callApi.status === 'OK') {
+//     console.log(callApi);
+//     $('div#api_status').addClass('available');
+//   } else {
+//     $('div#api_status').removeClass('available');
+//     };
 
 
 
