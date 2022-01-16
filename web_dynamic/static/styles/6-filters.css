@@ -36,11 +36,11 @@ button:hover {
     font-weight: 600;
 }
 .filters h4 {
+    /* border-style: solid; */
     margin-left: 15%;
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
-    /* border-style: solid; */
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -56,14 +56,12 @@ button:hover {
     height: 100%;
     width: 25%;
 }
-/* .amenities h4 {
-    border-style: solid;
-    width: 15rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    height: 14px;
-} */
+.amenities h4 {
+    width: 100%;
+}
+.locations h4 {
+    width: 75%;
+}
 .popover {
     visibility: hidden;
     width: 100%;
