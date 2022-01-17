@@ -15,9 +15,9 @@ setTimeout(() => {
   });
 }, 200);
 
-$.get('http://0.0.0.0:5000/api/v1/status/', (data) => {
+$.get('http://127.0.0.1:5001/api/v1/status/', (data) => {
   if (data.status === 'OK') {
-  console.log(data);
+    console.log(data);
     $('div#api_status').addClass('available');
   } else {
     $('div#api_status').removeClass('available');
@@ -35,13 +35,12 @@ $.get('http://0.0.0.0:5000/api/v1/status/', (data) => {
 
 
 // $(() => {
-//   $.ajax({
-//     url: 'http://172.25.88.2:5001/api/v1/status/',
-//     type: 'get',
-//     data: 'a'
-//   }).done(function (data, statusText, xhr) {
-//     var status = xhr.status;                //200
-//     console.log(status);
-//     // var head = xhr.getAllResponseHeaders(); //Detail header info
+//   $.get('http://127.0.0.1:5001/api/v1/status/', (data) => {
+//     if (data.status === 'OK') {
+//       console.log(data);
+//       $('div#api_status').addClass('available');
+//     } else {
+//       $('div#api_status').removeClass('available');
+//     }
 //   });
 // });
