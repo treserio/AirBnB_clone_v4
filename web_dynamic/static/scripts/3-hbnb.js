@@ -29,7 +29,7 @@ $.ajax({
   contentType: 'application/json',
   data: '{}',
   success: (res) => {
-    for (place of res) {
+    for (const place of res) {
       $.get('http://127.0.0.1:5001/api/v1/users/' + place.user_id, (usrData) => {
         $('.places').append(`<article>
         <div class="title_box">
